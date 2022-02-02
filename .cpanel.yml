@@ -2,5 +2,5 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/thediagr/public_html/
- - /bin/cp -R public/about $DEPLOYPATH
+ - /bin/cp/cp -R about $DEPLOYPATH
  
