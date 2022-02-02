@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Diagramme</title>
+    <link>http://example.org/</link>
+    <description>Recent content on The Diagramme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Feb 2022 20:03:27 +0300</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Wed, 02 Feb 2022 20:03:27 +0300</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>Welcome to our new hugo site. We create awe websites.</description>
+    </item>
+    
+    <item>
+      <title>Post 4</title>
+      <link>http://example.org/posts/post-4/</link>
+      <pubDate>Wed, 02 Feb 2022 18:03:02 +0300</pubDate>
+      
+      <guid>http://example.org/posts/post-4/</guid>
+      <description>How business administrations are the new business administrations. Expose: you&amp;rsquo;re losing money by not using tractor supply companies. Famous entrepreneurs in 12 easy steps. 5 facts about stockcharts that will impress your friends. How financial advisors are making the world a better place. 6 least favorite financial advisors. 11 things your boss expects you know about small business loans. Expose: you&amp;rsquo;re losing money by not using business insurances. 12 great articles about tractor supply companies.</description>
+    </item>
+    
+    <item>
+      <title>Post 3</title>
+      <link>http://example.org/posts/post-3/</link>
+      <pubDate>Wed, 02 Feb 2022 18:02:22 +0300</pubDate>
+      
+      <guid>http://example.org/posts/post-3/</guid>
+      <description>How business administrations are the new business administrations. Expose: you&amp;rsquo;re losing money by not using tractor supply companies. Famous entrepreneurs in 12 easy steps. 5 facts about stockcharts that will impress your friends. How financial advisors are making the world a better place. 6 least favorite financial advisors. 11 things your boss expects you know about small business loans. Expose: you&amp;rsquo;re losing money by not using business insurances. 12 great articles about tractor supply companies.</description>
+    </item>
+    
+    <item>
+      <title>Post 2</title>
+      <link>http://example.org/posts/post-2/</link>
+      <pubDate>Wed, 02 Feb 2022 18:02:13 +0300</pubDate>
+      
+      <guid>http://example.org/posts/post-2/</guid>
+      <description>How business administrations are the new business administrations. Expose: you&amp;rsquo;re losing money by not using tractor supply companies. Famous entrepreneurs in 12 easy steps. 5 facts about stockcharts that will impress your friends. How financial advisors are making the world a better place. 6 least favorite financial advisors. 11 things your boss expects you know about small business loans. Expose: you&amp;rsquo;re losing money by not using business insurances. 12 great articles about tractor supply companies.</description>
+    </item>
+    
+    <item>
+      <title>The unconventional guide to good interview questions</title>
+      <link>http://example.org/posts/welcome/</link>
+      <pubDate>Wed, 02 Feb 2022 17:41:41 +0300</pubDate>
+      
+      <guid>http://example.org/posts/welcome/</guid>
+      <description>How business administrations are the new business administrations. Expose: you&amp;rsquo;re losing money by not using tractor supply companies. Famous entrepreneurs in 12 easy steps. 5 facts about stockcharts that will impress your friends. How financial advisors are making the world a better place. 6 least favorite financial advisors. 11 things your boss expects you know about small business loans. Expose: you&amp;rsquo;re losing money by not using business insurances. 12 great articles about tractor supply companies.</description>
+    </item>
+    
+  </channel>
+</rss>
