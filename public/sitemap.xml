@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>https://thediagramme.com/about/</loc>
     <lastmod>2022-02-02T20:03:27+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/about/</loc>
+    <loc>https://thediagramme.com/tags/about/</loc>
     <lastmod>2022-02-02T20:03:27+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://thediagramme.com/tags/</loc>
     <lastmod>2022-02-02T20:03:27+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://thediagramme.com/</loc>
     <lastmod>2022-02-02T20:03:27+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/post-4/</loc>
+    <loc>https://thediagramme.com/posts/post-4/</loc>
     <lastmod>2022-02-02T18:03:02+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://thediagramme.com/posts/</loc>
     <lastmod>2022-02-02T18:03:02+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/ko/</loc>
+    <loc>https://thediagramme.com/tags/ko/</loc>
     <lastmod>2022-02-02T18:02:22+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/post-3/</loc>
+    <loc>https://thediagramme.com/posts/post-3/</loc>
     <lastmod>2022-02-02T18:02:22+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/ral/</loc>
+    <loc>https://thediagramme.com/tags/ral/</loc>
     <lastmod>2022-02-02T18:02:22+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/post-2/</loc>
+    <loc>https://thediagramme.com/posts/post-2/</loc>
     <lastmod>2022-02-02T18:02:13+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/tir/</loc>
+    <loc>https://thediagramme.com/tags/tir/</loc>
     <lastmod>2022-02-02T18:02:13+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/jah/</loc>
+    <loc>https://thediagramme.com/tags/jah/</loc>
     <lastmod>2022-02-02T17:41:41+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/welcome/</loc>
+    <loc>https://thediagramme.com/posts/welcome/</loc>
     <lastmod>2022-02-02T17:41:41+03:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://thediagramme.com/categories/</loc>
   </url>
 </urlset>
