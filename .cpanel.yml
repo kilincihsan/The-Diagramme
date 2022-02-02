@@ -2,10 +2,5 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/thediagr/public_html/
- - /bin/cp -R archetypes $DEPLOYPATH
- - /bin/cp -R content $DEPLOYPATH
- - /bin/cp -R layouts $DEPLOYPATH
- - /bin/cp -R public $DEPLOYPATH
- - /bin/cp -R static $DEPLOYPATH
- - /bin/cp .hugo_build.lock $DEPLOYPATH
- - /bin/cp config.toml $DEPLOYPATH
+ - /bin/cp -R public/about $DEPLOYPATH
+ 
