@@ -6,5 +6,4 @@ author = "İhsan Kılınç"
 tags = ["about"]
 +++
 
-Welcome to our new hugo site. We create awe websites.
-
+Its a work in progress blog.
