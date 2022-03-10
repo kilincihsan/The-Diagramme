@@ -1,19 +1,19 @@
 {{ define "main" }}
 <article class="single-post">
-    <h1 class="entry-title mt-4 mb-4">{{ .Title }}</h1>
+    <h1 class="entry-title mt-4 mb-4">{{ .Title }}</h1>    
+    <div class="entry-content"> {{ .Content }}</div>
     <div class="post-meta mb-4">
         <span class="post-author ">
-            Posted by: {{ .Params.author }}
+            <i class="bi bi-file-person-fill"></i> {{ .Params.author }}
         </span>
         <span class="post-date">
-            <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+            <i class="bi bi-clock-fill"></i> <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
         </span>
         <span class="post-tags">
             {{ range (.GetTerms "tags") }}
-                <a href="{{ .Permalink }}">{{ .LinkTitle }} </a>
+            <i class="bi bi-bookmark-check-fill"></i> <a href="{{ .Permalink }}">{{ .LinkTitle }} </a>
             {{ end }}
         </span>
     </div>
-    <div class="entry-content"> {{ .Content }}</div>
 </article>
 {{ end }}

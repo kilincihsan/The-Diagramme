@@ -7,18 +7,19 @@
         </h1>
 
         <div class="entry-content"> {{ .Summary }}</div>
-        <div class="post-meta mt-4">
+        <div class="post-meta mt-4 pl">
             <span class="post-author">
-                Posted by: {{ .Params.author }}
+                <i class="bi bi-file-person-fill"> </i> {{ .Params.author }}
             </span>
             <span class="post-date">
-                <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                <i class="bi bi-clock-fill"> </i><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>
             </span>
             <span class="post-tags">
                 {{ range (.GetTerms "tags") }}
-                    <a href="{{ .Permalink }}">{{ .LinkTitle }} </a>
+                <i class="bi bi-bookmark-check-fill"> </i> <a href="{{ .Permalink }}">{{ .LinkTitle }} </a>
                 {{ end }}
             </span>
+            
         </div>
     </article>
     {{ end }}

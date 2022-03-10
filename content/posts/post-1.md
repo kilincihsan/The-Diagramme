@@ -1,5 +1,5 @@
 +++
-title = "The unconventional guide to good interview questions"
+title = "First post"
 date = 2022-02-02T17:41:41+03:00
 draft = false
 author = "İhsan Kılınç"

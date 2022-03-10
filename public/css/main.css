@@ -10,7 +10,7 @@ img{
 .page-wrapper {
     display:flex;
     min-height: 100vh;
-    background-image: url(/images/bg.jpg);
+    background:white;
     background-size: cover;
     position: relative;
     justify-content: center;
@@ -25,15 +25,44 @@ img{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
 
 }
 
+
+
 .page-wrapper h1 {
+    font-size: 2.5rem;
     color: white;
     position: relative;
     z-index: 500;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: rgba(46, 63, 81, 1.0);
+    border: rgba(46, 63, 81, 1.0) solid 1px;
 }
+.page-wrapper h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 500;
+}
+.page-wrapper h2 {
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    z-index: 500;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: rgba(46, 63, 81, 1.0);
+    border: rgba(46, 63, 81, 1.0) solid 1px;
+}
+.page-wrapper h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 500;
+}
+
 .home-nav {
     display: flex;
     justify-content: center;
@@ -44,10 +73,36 @@ img{
     padding: 0;
 }
 
+.home-container{
+    border: 3px solid rgba(46, 63, 81, 1.0);
+    background-color: white;
+
+}
+
+
+.home-container img{
+    margin: 0 auto;
+    display: block;
+}
+
 .home-nav li a{
+    background-color: rgba(46, 63, 81, 1.0);
+    border: white solid 3px;
     text-decoration: none;
     color: white;
     font-size: 1.6rem;
     display: inline-block;
     padding: 1rem;
+    margin: 0;
+}
+
+.home-container blockquote p{
+    background-color: rgba(46, 63, 81, 1.0);
+    border: white solid 0px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0;
 }
