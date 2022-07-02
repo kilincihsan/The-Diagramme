@@ -3,7 +3,7 @@ title = "First post"
 date = 2022-02-02T17:41:41+03:00
 draft = true
 author = "İhsan Kılınç"
-tags = ["jah", "ko"]
+tags = ["jah", "ko" ,"tir","ral"]
 +++
 
 How business administrations are the new business administrations. Expose: you're losing money by not using tractor supply companies. Famous entrepreneurs in 12 easy steps. 5 facts about stockcharts that will impress your friends. How financial advisors are making the world a better place. 6 least favorite financial advisors. 11 things your boss expects you know about small business loans. Expose: you're losing money by not using business insurances. 12 great articles about tractor supply companies. Why entrepreneur definitions should be 1 of the 7 deadly sins.

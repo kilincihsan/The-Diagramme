@@ -1,7 +1,7 @@
 +++
 title = "Post 2"
 date = 2022-02-02T18:02:13+03:00
-draft = true
+draft = false
 author = "İhsan Kılınç"
 tags = ["tir","ral","ko"]
 +++

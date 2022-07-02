@@ -1,7 +1,7 @@
 +++
 title = "Post 7"
 date = 2022-02-02T18:03:18+03:00
-draft = true
+draft = false
 author = "Ihsan"
 tags = []
 +++
