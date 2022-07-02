@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tir on The Diagramme</title>
+    <link>https://thediagramme.com/tags/tir/</link>
+    <description>Recent content in tir on The Diagramme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Jul 2022 14:59:07 +0300</lastBuildDate><atom:link href="https://thediagramme.com/tags/tir/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 1</title>
+      <link>https://thediagramme.com/posts/post-1/</link>
+      <pubDate>Sat, 02 Jul 2022 14:59:07 +0300</pubDate>
+      
+      <guid>https://thediagramme.com/posts/post-1/</guid>
+      <description>Why entrepreneur definitions should be 1 of the 7 deadly sins.</description>
+    </item>
+    
+  </channel>
+</rss>
