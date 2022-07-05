@@ -6,14 +6,15 @@
     <description>Recent content on The Diagramme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2022 20:24:44 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jul 2022 20:26:26 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Post1</title>
-      <link>https://thediagramme.com/posts/post1/</link>
-      <pubDate>Mon, 04 Jul 2022 20:24:44 +0300</pubDate>
+      <title>How to convert String to Array in JavaScript?</title>
+      <link>https://thediagramme.com/posts/how-to-convert-string-to-array-javascript/</link>
+      <pubDate>Mon, 04 Jul 2022 20:26:26 +0300</pubDate>
       
-      <guid>https://thediagramme.com/posts/post1/</guid>
-      <description></description>
+      <guid>https://thediagramme.com/posts/how-to-convert-string-to-array-javascript/</guid>
+      <description>If you want to convert your string into an array without writing complex code you have 4 options;
+Using String.split() Using Spread Operator [&amp;hellip;String] Using Array.from(String) Usign Object.assign([],string) 1. Using split() Method This is the most popular method for converting a string to an array and is also used for a few other javascript tricks like replacing all of the occurrences for given character. It is not a destructive method which means it doesn&amp;rsquo;t change the original value, just returns another copy of it.</description>
     </item>
     
     <item>
