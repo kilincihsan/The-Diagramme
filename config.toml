@@ -5,3 +5,23 @@ paginate=4
 
 [params]
 dateFormat = "Jan 2, 2006, 3:04PM"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    noHl = false
+    style = 'dracula'
+    tabWidth = 100
+
+[minify]
+disableHTML = true
+
