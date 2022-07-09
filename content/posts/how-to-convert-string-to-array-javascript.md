@@ -6,6 +6,8 @@ author = "İhsan Kılınç"
 tags = ["javascript"]
 +++
 
+![x](/images/str-to-arr.PNG)
+
 If you want to convert your string into an array without writing complex code you have 4 options;
 
 - Using String.split() 

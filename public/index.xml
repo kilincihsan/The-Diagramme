@@ -6,7 +6,18 @@
     <description>Recent content on The Diagramme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2022 20:26:26 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jul 2022 19:55:57 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to convert Array to String in JavaScript?</title>
+      <link>https://thediagramme.com/posts/how-to-convert-array-to-string-javascript/</link>
+      <pubDate>Sat, 09 Jul 2022 19:55:57 +0300</pubDate>
+      
+      <guid>https://thediagramme.com/posts/how-to-convert-array-to-string-javascript/</guid>
+      <description>If you want to convert your array into a string you can use three of these methods;
+Using toString() Method Using join() Method Using Type Coercion Using Type Conversion Convert Using .toString() The Array object overrides the toString() method of Object so we can use it on Arrays. This will actually call the join() method which will join each element seperated by commas.
+toString() syntax toString() There are no parameters.</description>
+    </item>
+    
     <item>
       <title>How to convert String to Array in JavaScript?</title>
       <link>https://thediagramme.com/posts/how-to-convert-string-to-array-javascript/</link>
