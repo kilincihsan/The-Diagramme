@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How to Setup Assembly in Visual Studio</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script 
+    src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+    </script>
+    <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+</head>
+<body>
+    <header id="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" style="font-size: 24px; font-weight: bold; color: rgba(46, 63, 81, 1.0);" href="/">
+                <img src="../../../images/logo_2.png" alt="..." height="70px">
+                The Diagramme
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="/about/">About</a>
+                  <a class="nav-link" href="/posts/">Posts</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="site-main">
+        <div class="container">
+            
+<article class="single-post">
+    <h1 class="entry-title mt-4 mb-4">How to Setup Assembly in Visual Studio</h1>    
+    <div class="entry-content"> <p><img src="/images/asm/masm.jpg" alt="Microsoft Macro Assembler"></p>
+<p><strong>If you want to use Assembly on Visual Studio follow the steps below;</strong></p>
+<ol>
+<li>Create new project (Ctrl+Shift+N) &gt; Empty C++ Project</li>
+<li>Right click project &gt; Build Dependencies &gt; Build Customizations &gt; Check .masm</li>
+</ol>
+<p><img src="/images/asm/s1.PNG" alt="Check .masm"></p>
+<ol start="3">
+<li>Right click project &gt; Add &gt; New Item &gt; create main.cpp (name it whatever you want)</li>
+<li>Right click project &gt; Add &gt; New Item &gt; create test.asm (it must be named something different from cpp)</li>
+<li>Right click .asm file &gt; Properties &gt; Item Type &gt; Microsoft Macro Assembler</li>
+</ol>
+<p><img src="/images/asm/s2.PNG" alt="Item type - Microsoft Macro Assembler"></p>
+<ol start="6">
+<li>Copy the code below and start debug.</li>
+</ol>
+<h2 id="maincpp">main.cpp</h2>
+<p>Copy this code to your cpp file;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>    <span style="color:#8f5902;font-style:italic">#include</span> <span style="color:#8f5902;font-style:italic">&lt;iostream&gt;</span><span style="color:#8f5902;font-style:italic">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#8f5902;font-style:italic"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#204a87;font-weight:bold">using</span> <span style="color:#204a87;font-weight:bold">namespace</span> <span style="color:#000">std</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#204a87;font-weight:bold">extern</span> <span style="color:#4e9a06">&#34;C&#34;</span> <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">getData</span><span style="color:#000;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">main</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        <span style="color:#000">cout</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#4e9a06">&#34;Returns::&#34;</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">getData</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">&lt;&lt;</span> <span style="color:#000">endl</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#000;font-weight:bold">}</span></span></span></code></pre></div>
+<h2 id="testasm">test.asm</h2>
+<p>Copy this code to your asm file;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">data</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">code</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#000">getData</span> <span style="color:#000">proc</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#000;font-weight:bold">;</span><span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#000">mov</span> <span style="color:#000">rax</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">10</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#000;font-weight:bold">;</span><span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">++</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#000">inc</span> <span style="color:#000">ax</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#000;font-weight:bold">;</span><span style="color:#000">x</span><span style="color:#ce5c00;font-weight:bold">*=</span><span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#000">imul</span> <span style="color:#000">ax</span><span style="color:#000;font-weight:bold">,</span><span style="color:#0000cf;font-weight:bold">10</span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#000">ret</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#000">getData</span> <span style="color:#000">endp</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#000">end</span></span></span></code></pre></div>
+<h2 id="how-to-debug">How to Debug?</h2>
+<p>You want to see <strong>registers</strong> and <strong>memory</strong> and everything if ur dealing with Assembly. Thats how you gonna do it;</p>
+<ol>
+<li>Create a breakpoint in your asm code. (click left side of line nos)</li>
+<li>Start debug.(F5 default)</li>
+<li>From the upper menu &gt; Debug &gt; Windows &gt; check register and memory</li>
+</ol>
+<blockquote>
+<p>These windows only appear when debug happen. They will appear automatically after that so you don&rsquo;t need to reopen them every time. Use F11 to iterate through.</p>
+</blockquote>
+<h2 id="summary">Summary</h2>
+<p>We are using MASM(Microsoft Macro Assembler) and C++ both together to work on Assembly. The reason behind is; sometimes you simply don&rsquo;t want to deal with Assembly while sending parameters, showing result, using a library, generate some random number etc. That&rsquo;s where C++ come handy. Probably, you will not write any C++ code but it will be helpfull for simple tasks where you don&rsquo;t want to deal with interrupts.</p>
+<p>As an alternative you can use Visual Studio Code with plugins like dosbox, gnu etc., but it is easier to use and debug if you choose Visual Studio. And most of the alternative setups consume your energy without even writing any code.</p>
+<p>If you don&rsquo;t know where to go after this. You can check the Assembly tag and find threads about tutorials and examples. Good luck!</p>
+</div>
+    <div class="post-meta mb-4">
+        <span class="post-author ">
+            <i class="bi bi-file-person-fill"></i> İhsan Kılınç
+        </span>
+        <span class="post-date">
+            <i class="bi bi-clock-fill"></i> <time>Jul 10, 2022, 2:24AM</time>
+        </span>
+        <span class="post-tags">
+            
+            <i class="bi bi-bookmark-check-fill"></i> <a href="https://thediagramme.com/tags/assembly/">Assembly </a>
+            
+        </span>
+    </div>
+</article>
+
+        </div>
+
+    </main>
+    <footer id="side-footer" class="bg-dark text-white pb-4 pt-4">
+        <div class="copyright text-center">
+            &copy; 2022 İhsan Kılınç
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

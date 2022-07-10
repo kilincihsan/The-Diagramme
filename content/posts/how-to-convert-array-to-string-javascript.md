@@ -3,9 +3,9 @@ title = "How to convert Array to String in JavaScript?"
 date = 2022-07-09T19:55:57+03:00
 draft = false
 author = "İhsan Kılınç"
-tags = ["javascript"]
+tags = ["JavaScript"]
 +++
-![x](/images/arr-to-str.PNG)
+![x](/images/js/arr-to-str.PNG)
 
 If you want to convert your array into a string you can use three of these methods;
 
@@ -154,7 +154,7 @@ console.log(String(arr));
 
 You can split a String and join after, if you want to replace all occurences of a character inside a String. 
 
-![JavaScript replace trick](/images/replace-alternative.PNG)
+![JavaScript replace trick](/images/js/replace-alternative.PNG)
  
 **Changing "X" characters to "R"**;
 

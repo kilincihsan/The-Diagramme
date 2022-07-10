@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How to convert Array to String in JavaScript?</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script 
+    src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+    </script>
+    <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+</head>
+<body>
+    <header id="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" style="font-size: 24px; font-weight: bold; color: rgba(46, 63, 81, 1.0);" href="/">
+                <img src="../../../images/logo_2.png" alt="..." height="70px">
+                The Diagramme
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="/about/">About</a>
+                  <a class="nav-link" href="/posts/">Posts</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="site-main">
+        <div class="container">
+            
+<article class="single-post">
+    <h1 class="entry-title mt-4 mb-4">How to convert Array to String in JavaScript?</h1>    
+    <div class="entry-content"> <p><img src="/images/js/arr-to-str.PNG" alt="x"></p>
+<p>If you want to convert your array into a string you can use three of these methods;</p>
+<ol>
+<li><a href="#convert-using-tostring">Using toString() Method</a></li>
+<li><a href="#convert-using-join">Using join() Method</a></li>
+<li><a href="#convert-using-type-coercion">Using Type Coercion</a></li>
+<li><a href="#convert-using-type-conversion">Using Type Conversion</a></li>
+</ol>
+<h2 id="convert-using-tostring">Convert Using .toString()</h2>
+<p>The Array object overrides the toString() method of Object so we can use it on Arrays. This will actually call the join() method which will join each element seperated by commas.</p>
+<h5 id="tostring-syntax">toString() syntax</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">toString</span><span style="color:#ce5c00;font-weight:bold">()</span></span></span></code></pre></div>
+<p>There are <strong>no parameters</strong>. This won&rsquo;t change the original Array because it is <strong>not destructive</strong>.</p>
+<h5 id="example">Example</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using toString()
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr.toString());
+</span></span></code></pre></div><h6 id="output">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;L,o,r,e,m, ,i,p,s,u,m&#34;</span></span></span></code></pre></div>
+<p>Notice that, it returned each element with commas. If you don&rsquo;t want commas you should use join() instead because it is not possible with toString().</p>
+<h2 id="convert-using-join">Convert Using .join()</h2>
+<p>The Array object <strong>overrides the toString() method</strong> of Object so we can use it on Arrays. This actually &ldquo;L,o,r,e,m, ,i,p,s,u,m&rdquo; method which joins each element seperated by commas.</p>
+<h5 id="join-syntax">join() syntax</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">join</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">optional</span> <span style="color:#204a87;font-weight:bold">separator</span><span style="color:#ce5c00;font-weight:bold">)</span></span></span></code></pre></div>
+<p><strong>Seperator</strong> is optional. If you use this method without parameter like this <strong>str.join()</strong>;</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">b</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">c</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">d</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">e</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">f</span><span style="color:#ce5c00;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=&gt;</span> <span style="color:#4e9a06">&#34;a,b,c,d,e,f&#34;</span></span></span></code></pre></div>
+<p>Each character <strong>joins with commas as default</strong>.</p>
+<h5 id="example-1">Example 1</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using toString()
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr.join(<span style="color:#f1fa8c">&#34;&#34;</span>));
+</span></span></code></pre></div><h6 id="output-1">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Lorem ipsum&#34;</span></span></span></code></pre></div>
+<p>In this example, we used an <strong>empty string as seperator</strong>. Notice that it returned <strong>without commas</strong> which was default.</p>
+<h5 id="example-2">Example 2</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using join(&#34; &#34;)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr.join(<span style="color:#f1fa8c">&#34; &#34;</span>));
+</span></span></code></pre></div><h6 id="output-2">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;L o r e m   i p s u m&#34;</span></span></span></code></pre></div>
+<p>In this example, we used <strong>white space as seperator</strong>. Function returned each element of this Array seperated with whitespace as String.</p>
+<h5 id="example-3">Example 3</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using join(&#34;X&#34;)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr.join(<span style="color:#f1fa8c">&#34;X&#34;</span>));
+</span></span></code></pre></div><h6 id="output-3">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;LXoXrXeXmX XiXpXsXuXm&#34;</span></span></span></code></pre></div>
+<p>In this example, we used the <strong>&lsquo;X&rsquo; character as seperator</strong>. This returned each element seperated with X as String.</p>
+<h2 id="convert-using-type-coercion">Convert Using Type Coercion</h2>
+<p>Type Coercion is an automatic or implicit conversion of one data type to another. (number-&gt;string etc.) When you add string to other types JS auto converts the product to String. If you want to convert an Array to String it is handy and short.</p>
+<h5 id="example-1-1">Example 1</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//type coercion
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;&#34;</span>);
+</span></span></code></pre></div><h6 id="output-4">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#a40000">&#34;</span><span style="color:#204a87;font-weight:bold">L</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">o</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">r</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">e</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">m</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">p</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">s</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">u</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">m</span></span></span></code></pre></div>
+<h5 id="example-2-1">Example 2</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//type coercion
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(arr<span style="color:#ff79c6">+</span><span style="color:#f1fa8c">&#34;some kind of string&#34;</span>);
+</span></span></code></pre></div><h6 id="output-5">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;L,o,r,e,m, ,i,p,s,u,msome kind of string&#34;</span></span></span></code></pre></div>
+<p>It can be usefull as shorter alternative to toString() but note that commas stil exists. If you want to remove commas, you can use replace functions after coercion.</p>
+<h2 id="convert-using-type-conversion">Convert Using Type Conversion</h2>
+<p>We can use explicit type conversion when we want to change one data type to another. If you want to convert other data types to String you can use;</p>
+<h5 id="stringobject-syntax">String(object) syntax</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">String</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">object</span><span style="color:#ce5c00;font-weight:bold">)</span></span></span></code></pre></div>
+<p>Parameter can be a number,string,array etc.</p>
+<h5 id="example-4">Example</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//type conversion
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>arr<span style="color:#ff79c6">=</span>[<span style="color:#f1fa8c">&#34;L&#34;</span>, <span style="color:#f1fa8c">&#34;o&#34;</span>, <span style="color:#f1fa8c">&#34;r&#34;</span>, <span style="color:#f1fa8c">&#34;e&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>, <span style="color:#f1fa8c">&#34; &#34;</span>, <span style="color:#f1fa8c">&#34;i&#34;</span>, <span style="color:#f1fa8c">&#34;p&#34;</span>, <span style="color:#f1fa8c">&#34;s&#34;</span>, <span style="color:#f1fa8c">&#34;u&#34;</span>, <span style="color:#f1fa8c">&#34;m&#34;</span>];
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(<span style="color:#8be9fd;font-style:italic">String</span>(arr));
+</span></span></code></pre></div><h6 id="output-6">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;L,o,r,e,m, ,i,p,s,u,m&#34;</span></span></span></code></pre></div>
+<h2 id="tricks">Tricks</h2>
+<p>You can split a String and join after, if you want to replace all occurences of a character inside a String.</p>
+<p><img src="/images/js/replace-alternative.PNG" alt="JavaScript replace trick"></p>
+<p><strong>Changing &ldquo;X&rdquo; characters to &ldquo;R&rdquo;</strong>;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using split and join trick to replace elements
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;AXBXCXDXEX&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(str.split(<span style="color:#f1fa8c">&#34;X&#34;</span>).join(<span style="color:#f1fa8c">&#34;R&#34;</span>));
+</span></span></code></pre></div><h6 id="output-7">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;ARBRCRDRER&#34;</span></span></span></code></pre></div>
+<h2 id="fast-question">Fast Question</h2>
+
+<div class='quizdown'>
+  
+
+---
+primary_color: orange
+secondary_color: lightgray
+text_color: black
+shuffle_questions: false
+---
+
+## var x = "anNoying quest ion"
+
+---
+shuffle_answers: false
+---
+Use split trick to remove whitespaces and change this string into **"anNoying-quest-ion"**?
+> join is the opposite function of the split.
+
+- [ ] `console.log(x.split("N").join(" "));`
+- [x] `console.log(x.split(" ").join("-"));`
+- [ ] `console.log(x.split(" ").join(""));`
+- [ ] `console.log(x.split(" ").join("N"));`
+
+
+
+</div>
+
+</div>
+    <div class="post-meta mb-4">
+        <span class="post-author ">
+            <i class="bi bi-file-person-fill"></i> İhsan Kılınç
+        </span>
+        <span class="post-date">
+            <i class="bi bi-clock-fill"></i> <time>Jul 9, 2022, 7:55PM</time>
+        </span>
+        <span class="post-tags">
+            
+            <i class="bi bi-bookmark-check-fill"></i> <a href="https://thediagramme.com/tags/javascript/">javascript </a>
+            
+        </span>
+    </div>
+</article>
+
+        </div>
+
+    </main>
+    <footer id="side-footer" class="bg-dark text-white pb-4 pt-4">
+        <div class="copyright text-center">
+            &copy; 2022 İhsan Kılınç
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

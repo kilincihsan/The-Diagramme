@@ -25,3 +25,5 @@ dateFormat = "Jan 2, 2006, 3:04PM"
 [minify]
 disableHTML = true
 
+[permalinks]
+  posts = '/:title/'

@@ -6,13 +6,23 @@
     <description>Recent content in Posts on The Diagramme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jul 2022 19:55:57 +0300</lastBuildDate><atom:link href="https://thediagramme.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 02:24:05 +0300</lastBuildDate><atom:link href="https://thediagramme.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Setup Assembly in Visual Studio</title>
+      <link>https://thediagramme.com/how-to-setup-assembly-in-visual-studio/</link>
+      <pubDate>Sun, 10 Jul 2022 02:24:05 +0300</pubDate>
+      
+      <guid>https://thediagramme.com/how-to-setup-assembly-in-visual-studio/</guid>
+      <description>If you want to use Assembly on Visual Studio follow the steps below;
+Create new project (Ctrl+Shift+N) &amp;gt; Empty C++ Project Right click project &amp;gt; Build Dependencies &amp;gt; Build Customizations &amp;gt; Check .masm Right click project &amp;gt; Add &amp;gt; New Item &amp;gt; create main.cpp (name it whatever you want) Right click project &amp;gt; Add &amp;gt; New Item &amp;gt; create test.asm (it must be named something different from cpp) Right click .</description>
+    </item>
+    
     <item>
       <title>How to convert Array to String in JavaScript?</title>
-      <link>https://thediagramme.com/posts/how-to-convert-array-to-string-javascript/</link>
+      <link>https://thediagramme.com/how-to-convert-array-to-string-in-javascript/</link>
       <pubDate>Sat, 09 Jul 2022 19:55:57 +0300</pubDate>
       
-      <guid>https://thediagramme.com/posts/how-to-convert-array-to-string-javascript/</guid>
+      <guid>https://thediagramme.com/how-to-convert-array-to-string-in-javascript/</guid>
       <description>If you want to convert your array into a string you can use three of these methods;
 Using toString() Method Using join() Method Using Type Coercion Using Type Conversion Convert Using .toString() The Array object overrides the toString() method of Object so we can use it on Arrays. This will actually call the join() method which will join each element seperated by commas.
 toString() syntax toString() There are no parameters.</description>
@@ -20,10 +30,10 @@ toString() syntax toString() There are no parameters.</description>
     
     <item>
       <title>How to convert String to Array in JavaScript?</title>
-      <link>https://thediagramme.com/posts/how-to-convert-string-to-array-javascript/</link>
+      <link>https://thediagramme.com/how-to-convert-string-to-array-in-javascript/</link>
       <pubDate>Mon, 04 Jul 2022 20:26:26 +0300</pubDate>
       
-      <guid>https://thediagramme.com/posts/how-to-convert-string-to-array-javascript/</guid>
+      <guid>https://thediagramme.com/how-to-convert-string-to-array-in-javascript/</guid>
       <description>If you want to convert your string into an array without writing complex code you have 4 options;
 Using String.split() Using Spread Operator [&amp;hellip;String] Using Array.from(String) Usign Object.assign([],string) 1. Using split() Method This is the most popular method for converting a string to an array and is also used for a few other javascript tricks like replacing all of the occurrences for given character. It is not a destructive method which means it doesn&amp;rsquo;t change the original value, just returns another copy of it.</description>
     </item>

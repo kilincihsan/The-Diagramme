@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Assembly on The Diagramme</title>
+    <link>https://thediagramme.com/tags/assembly/</link>
+    <description>Recent content in Assembly on The Diagramme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jul 2022 02:24:05 +0300</lastBuildDate><atom:link href="https://thediagramme.com/tags/assembly/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Setup Assembly in Visual Studio</title>
+      <link>https://thediagramme.com/how-to-setup-assembly-in-visual-studio/</link>
+      <pubDate>Sun, 10 Jul 2022 02:24:05 +0300</pubDate>
+      
+      <guid>https://thediagramme.com/how-to-setup-assembly-in-visual-studio/</guid>
+      <description>If you want to use Assembly on Visual Studio follow the steps below;
+Create new project (Ctrl+Shift+N) &amp;gt; Empty C++ Project Right click project &amp;gt; Build Dependencies &amp;gt; Build Customizations &amp;gt; Check .masm Right click project &amp;gt; Add &amp;gt; New Item &amp;gt; create main.cpp (name it whatever you want) Right click project &amp;gt; Add &amp;gt; New Item &amp;gt; create test.asm (it must be named something different from cpp) Right click .</description>
+    </item>
+    
+  </channel>
+</rss>

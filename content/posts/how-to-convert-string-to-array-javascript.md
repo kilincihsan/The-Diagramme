@@ -3,10 +3,10 @@ title = "How to convert String to Array in JavaScript?"
 date = 2022-07-04T20:26:26+03:00
 draft = false
 author = "İhsan Kılınç"
-tags = ["javascript"]
+tags = ["JavaScript"]
 +++
 
-![x](/images/str-to-arr.PNG)
+![x](/images/js/str-to-arr.PNG)
 
 If you want to convert your string into an array without writing complex code you have 4 options;
 

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How to convert String to Array in JavaScript?</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script 
+    src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+    </script>
+    <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+</head>
+<body>
+    <header id="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" style="font-size: 24px; font-weight: bold; color: rgba(46, 63, 81, 1.0);" href="/">
+                <img src="../../../images/logo_2.png" alt="..." height="70px">
+                The Diagramme
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="/about/">About</a>
+                  <a class="nav-link" href="/posts/">Posts</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="site-main">
+        <div class="container">
+            
+<article class="single-post">
+    <h1 class="entry-title mt-4 mb-4">How to convert String to Array in JavaScript?</h1>    
+    <div class="entry-content"> <p><img src="/images/js/str-to-arr.PNG" alt="x"></p>
+<p>If you want to convert your string into an array without writing complex code you have 4 options;</p>
+<ul>
+<li>Using String.split()</li>
+<li>Using Spread Operator [&hellip;String]</li>
+<li>Using Array.from(String)</li>
+<li>Usign Object.assign([],string)</li>
+</ul>
+<h2 id="1-using-split-method">1. Using split() Method</h2>
+<p>This is the most popular method for <strong>converting a string to an array</strong> and is also used for a few other javascript tricks like replacing all of the occurrences for given character. It is not a destructive method which means it doesn&rsquo;t change the original value, just returns another copy of it.</p>
+<h6 id="split-syntax">Split syntax</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">str</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">split</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">seperator</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#204a87;font-weight:bold">limit</span><span style="color:#ce5c00;font-weight:bold">)</span></span></span></code></pre></div>
+<p><strong>Seperator</strong> and <strong>Limit</strong> are optional parameters.</p>
+<p>If you leave <strong>seperator undefined(str.split())</strong> it will return <strong>original string as array</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;abcdefghi&#34;</span> <span style="color:#ce5c00;font-weight:bold">=&gt;</span> <span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;abcdefghi&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<h6 id="example-1">Example 1</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using split(&#34;&#34;)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(str.split(<span style="color:#f1fa8c">&#34;&#34;</span>));
+</span></span></code></pre></div><h6 id="output">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;L&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;p&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;u&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;d&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;l&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<p>In this example, we used an <strong>empty string as seperator</strong>. This returns every character in given string as array.</p>
+<h6 id="example-2">Example 2</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using split(&#34; &#34;)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(str.split(<span style="color:#f1fa8c">&#34; &#34;</span>));
+</span></span></code></pre></div><h6 id="output-1">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;Lorem&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;ipsum&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;dolor&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;sit&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;amet&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<p>In this example, we used a <strong>whitespace as seperator</strong>. This will return the <strong>given string seperated by whitespace as array</strong>.</p>
+<h6 id="example-3">Example 3</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using split with seperator string
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(str.split(<span style="color:#f1fa8c">&#34;s&#34;</span>));
+</span></span></code></pre></div><h6 id="output-2">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#4e9a06">&#34;Lorem ip&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;um dolor &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;it amet&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<p>In this example, we used the <strong>&ldquo;s&rdquo; character as seperator</strong>. This returns every character in the <strong>given string seperated by &rsquo;s&rsquo; as an array</strong>. Notice that, &rsquo;s&rsquo; not included in result.</p>
+<h2 id="2-using-string">2. Using [&hellip;String]</h2>
+<p>It is an <strong>operator</strong> and <strong>not destructive</strong> which means it is not going to change the original string just returns a copy of it.</p>
+<h6 id="example-1-1">Example 1</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using split method
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log([...str]);
+</span></span></code></pre></div><h6 id="output-3">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;L&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;p&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;u&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;d&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;l&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<p>This returns every character in given string as array just like str.split().</p>
+<h2 id="3-using-objectassign">3. Using Object.assign()</h2>
+<p>Originally used for <strong>cloning an object with its properties</strong>, but we are going to use it for converting a string into an array for each character. It is not destructive, it is a cloning process.</p>
+<h6 id="example">Example</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using object assign
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(<span style="color:#8be9fd;font-style:italic">Object</span>.assign([],str));
+</span></span></code></pre></div><h6 id="output-4">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;L&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;p&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;u&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;d&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;l&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<h2 id="4-using-arrayfrom">4. Using Array.from()</h2>
+<p>Originally used for <strong>cloning an array</strong>. It is <strong>not destructive</strong>, result will be copy of an array(array-like).</p>
+<h6 id="example-4">Example</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#6272a4">//using array from
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#6272a4"></span>str<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;Lorem ipsum dolor sit amet&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>console.log(<span style="color:#8be9fd;font-style:italic">Array</span>.from(str));
+</span></span></code></pre></div><h6 id="output-5">Output</h6>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">&#34;L&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;p&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;u&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;d&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;l&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;o&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;r&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;i&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34; &#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;m&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;e&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;t&#34;</span><span style="color:#ce5c00;font-weight:bold">]</span></span></span></code></pre></div>
+<h2 id="fast-question">Fast Question</h2>
+
+<div class='quizdown'>
+  
+
+---
+primary_color: orange
+secondary_color: lightgray
+text_color: black
+shuffle_questions: false
+---
+
+## var x = "anNoying quest ion"
+
+---
+shuffle_answers: false
+---
+Use split trick to remove whitespaces and change this string into **"anNoying-quest-ion"**?
+> join is the opposite function of the split.
+
+- [ ] `console.log(x.split("N").join(" "));`
+- [x] `console.log(x.split(" ").join("-"));`
+- [ ] `console.log(x.split(" ").join(""));`
+- [ ] `console.log(x.split(" ").join("N"));`
+
+
+
+</div>
+
+</div>
+    <div class="post-meta mb-4">
+        <span class="post-author ">
+            <i class="bi bi-file-person-fill"></i> İhsan Kılınç
+        </span>
+        <span class="post-date">
+            <i class="bi bi-clock-fill"></i> <time>Jul 4, 2022, 8:26PM</time>
+        </span>
+        <span class="post-tags">
+            
+            <i class="bi bi-bookmark-check-fill"></i> <a href="https://thediagramme.com/tags/javascript/">JavaScript </a>
+            
+        </span>
+    </div>
+</article>
+
+        </div>
+
+    </main>
+    <footer id="side-footer" class="bg-dark text-white pb-4 pt-4">
+        <div class="copyright text-center">
+            &copy; 2022 İhsan Kılınç
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
