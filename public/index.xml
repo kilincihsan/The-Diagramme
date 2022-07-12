@@ -6,7 +6,18 @@
     <description>Recent content on The Diagramme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jul 2022 02:24:05 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jul 2022 23:56:28 +0300</lastBuildDate><atom:link href="https://thediagramme.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Primitive Data Types in Assembly</title>
+      <link>https://thediagramme.com/primitive-data-types-in-assembly/</link>
+      <pubDate>Tue, 12 Jul 2022 23:56:28 +0300</pubDate>
+      
+      <guid>https://thediagramme.com/primitive-data-types-in-assembly/</guid>
+      <description>How to calculate range of data types? These are built-in and predefined data types can be used for declaring variables;
+Integer Float Double Character Boolean Wide Character Void And they have modifiers like;
+Short Long Signed Unsigned Each of them will allocate a memory space and have a range of values they can hold related to this space. For example, char requires 1 byte, int requires 4 byte, long and double requires 8 byte.</description>
+    </item>
+    
     <item>
       <title>How to Setup Assembly in Visual Studio</title>
       <link>https://thediagramme.com/how-to-setup-assembly-in-visual-studio/</link>
