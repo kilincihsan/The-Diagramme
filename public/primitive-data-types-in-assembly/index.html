@@ -46,8 +46,7 @@
             
 <article class="single-post">
     <h1 class="entry-title mt-4 mb-4">Primitive Data Types in Assembly</h1>    
-    <div class="entry-content"> <h2 id="how-to-calculate-range-of-data-types">How to calculate range of data types?</h2>
-<p>These are built-in and predefined data types can be used for declaring variables;</p>
+    <div class="entry-content"> <p><strong>Each type of variables</strong> will allocate a <strong>memory space</strong>. For example, char requires 1 byte, int requires 4 bytes, and long and double require 8 bytes. And <strong>all have different ranges related to that size</strong>. It can change by size and generalization for each programming language but it is the same or similar for most programming languages. Let&rsquo;s analyze variables for C++;</p>
 <ul>
 <li>Integer</li>
 <li>Float</li>
@@ -57,47 +56,162 @@
 <li>Wide Character</li>
 <li>Void</li>
 </ul>
-<p>And they have modifiers like;</p>
+<p>For example; when you define one of those, <strong>compiler generates a size directive</strong> and tells <strong>how much does it gonna cost</strong> to your memory. Let&rsquo;s look at size directives in more detail.</p>
+<h2 id="size-directives">Size Directives</h2>
+<p>Size directives tell the intended size of the data at given memory address.</p>
 <ul>
-<li>Short</li>
-<li>Long</li>
-<li>Signed</li>
-<li>Unsigned</li>
+<li>mov BYTE PTR [ebx], 2</li>
+<li>this will move 1 byte represantation of 2</li>
+<li>mov WORD PTR [ebx], 2</li>
+<li>this will move 2 byte represantation of 2</li>
+<li>mov DWORD PTR [ebx], 2</li>
+<li>this will move 4 byte represantation of 2</li>
 </ul>
-<p>Each of them will allocate a memory space and have a range of values they can hold related to this space. For example, char requires 1 byte, int requires 4 byte, long and double requires 8 byte. And all have different ranges related to that space. It can change by size and generalization for each programming language but it is common or similar for most of the programming languages.</p>
-<h2 id="range-calculation">Range Calculation</h2>
-<p>Default values can be seperated as signed and unsigned.</p>
-<ul>
-<li>Unsigned values can not be negative (range of unsigned char:. 0,255)</li>
-<li>Signed values can be negative or positive (range of signed char: -128,127)</li>
-</ul>
-<p>And note that, it is all <strong>signed by default</strong>.</p>
-<p>You can calculate the range with these formulas;</p>
-<h4 id="for-signed">For Signed:</h4>
-<h3 id="minimum0-maximum2n-1"><code>Minimum:0 Maximum:2^n-1</code></h3>
-<h4 id="for-unsigned">For Unsigned:</h4>
-<h3 id="-minimum-2n-1-maximum2n-1-1-"><code>Minimum:-2^(n-1) Maximum:2^(n-1)-1</code></h3>
-<h4 id="signed-example">Signed Example:</h4>
-<ul>
-<li>For example lets define a char;</li>
-<li>char c=0;</li>
-<li>We know that char requires 1 byte(8 bit)</li>
-<li>We know it will be signed by default.</li>
-<li>Formula for signed;</li>
-<li><strong>minimum -2^(n-1)</strong> = -2^7 = -128</li>
-<li><strong>maximum  2^(n-1)-1</strong> = 2^7-1 = 127</li>
-</ul>
-<h4 id="unsigned-example">Unsigned Example:</h4>
-<ul>
-<li>Lets define an unsigned long to understand it better;</li>
-<li>unsigned long x=0;</li>
-<li>We know that long requires 8 byte(64 bit)</li>
-<li>We know it is unsigned we added it to beginning of identifier.</li>
-<li>Formula for unsigned;</li>
-<li><strong>minimum was 0</strong> = 0</li>
-<li><strong>maximum was (2^n)-1</strong> = 2^64-1 = 18446744073709551615</li>
-</ul>
-<p>So the <strong>character we defined</strong> can take values between <strong>0 and 18446744073709551615</strong>.</p>
+
+
+
+
+
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Scalar type</th>
+<th>C data type</th>
+<th>Storage size (in bytes)</th>
+<th>Recommended alignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INT8</td>
+<td>char</td>
+<td>1</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>UINT8</td>
+<td>unsigned char</td>
+<td>1</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>INT16</td>
+<td>short</td>
+<td>2</td>
+<td>Word</td>
+</tr>
+<tr>
+<td>UINT16</td>
+<td>unsigned short</td>
+<td>2</td>
+<td>Word</td>
+</tr>
+<tr>
+<td>INT32</td>
+<td>int, long</td>
+<td>4</td>
+<td>Doubleword</td>
+</tr>
+<tr>
+<td>UINT32</td>
+<td>unsigned int, unsigned long</td>
+<td>4</td>
+<td>Doubleword</td>
+</tr>
+<tr>
+<td>INT64</td>
+<td>__int64</td>
+<td>8</td>
+<td>Quadword</td>
+</tr>
+<tr>
+<td>UINT64</td>
+<td>unsigned __int64</td>
+<td>8</td>
+<td>Quadword</td>
+</tr>
+<tr>
+<td>FP32 (single precision)</td>
+<td>float</td>
+<td>4</td>
+<td>Doubleword</td>
+</tr>
+<tr>
+<td>FP64 (double precision)</td>
+<td>double</td>
+<td>8</td>
+<td>Quadword</td>
+</tr>
+<tr>
+<td>POINTER</td>
+<td>*</td>
+<td>8</td>
+<td>Quadword</td>
+</tr>
+<tr>
+<td>__m64</td>
+<td>struct __m64</td>
+<td>8</td>
+<td>Quadword</td>
+</tr>
+<tr>
+<td>__m128</td>
+<td>struct __m128</td>
+<td>16</td>
+<td>Octaword</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example">Example</h3>
+<p><strong>In this example</strong>; I used <strong>Visual Studio Disassembly Tool</strong> to share with you what happens when you define primitive variables. You can do this yourself while debugging; press the hotkey <strong>CTRL+ALT+D</strong> or <strong>right click &gt; go to disassembly</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;iostream&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;conio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#ff79c6">using</span> <span style="color:#ff79c6">namespace</span> std;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#6272a4">//requires 4 bytes
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">int</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>; 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>    <span style="color:#6272a4">//requires 4 bytes
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">float</span> b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3.9</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    <span style="color:#6272a4">//requires 8 bytes
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">double</span> c <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4.11</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#6272a4">//requires 1 bytes
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">char</span> d <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;D&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>    <span style="color:#6272a4">//requires 1 bytes
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd">bool</span> e <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">true</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    <span style="color:#6272a4">//it will take 1 byte per character + 1 for zero
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#6272a4"></span>    string f <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hello world!&#34;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>}</span></span></code></pre></div>
+<h3 id="output">Output</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:100;-o-tab-size:100;tab-size:100;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">int</span> <span style="color:#000">a</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">3</span><span style="color:#000;font-weight:bold">;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD75479D</span>  <span style="color:#000">mov</span>         <span style="color:#000">dword</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">a</span><span style="color:#000;font-weight:bold">],</span><span style="color:#0000cf;font-weight:bold">3</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">float</span> <span style="color:#000">b</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">3.9</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547A4</span>  <span style="color:#000">movss</span>       <span style="color:#000">xmm0</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">dword</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">__real</span><span style="color:#a40000">@</span><span style="color:#0000cf;font-weight:bold">4079999</span><span style="color:#000">a</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">07FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD75E1D4h</span><span style="color:#000;font-weight:bold">)]</span>  
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547AC</span>  <span style="color:#000">movss</span>       <span style="color:#000">dword</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">b</span><span style="color:#000;font-weight:bold">],</span><span style="color:#000">xmm0</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">double</span> <span style="color:#000">c</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">4.11</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547B1</span>  <span style="color:#000">movsd</span>       <span style="color:#000">xmm0</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">mmword</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">__real</span><span style="color:#a40000">@</span><span style="color:#0000cf;font-weight:bold">401070</span><span style="color:#000">a3d70a3d71</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">07FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD75DC10h</span><span style="color:#000;font-weight:bold">)]</span>  
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547B9</span>  <span style="color:#000">movsd</span>       <span style="color:#000">mmword</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">c</span><span style="color:#000;font-weight:bold">],</span><span style="color:#000">xmm0</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">char</span> <span style="color:#000">d</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;D&#39;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547BE</span>  <span style="color:#000">mov</span>         <span style="color:#000">byte</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">d</span><span style="color:#000;font-weight:bold">],</span><span style="color:#0000cf;font-weight:bold">44</span><span style="color:#000">h</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">bool</span> <span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87">true</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547C2</span>  <span style="color:#000">mov</span>         <span style="color:#000">byte</span> <span style="color:#000">ptr</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#000">e</span><span style="color:#000;font-weight:bold">],</span><span style="color:#0000cf;font-weight:bold">1</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#000">string</span> <span style="color:#000">f</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;Hello world!&#34;</span><span style="color:#000;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547C9</span>  <span style="color:#000">lea</span>         <span style="color:#000">rdx</span><span style="color:#000;font-weight:bold">,[</span><span style="color:#000">string</span> <span style="color:#4e9a06">&#34;Hello world!&#34;</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">07FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD75E1E0h</span><span style="color:#000;font-weight:bold">)]</span>  
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547D0</span>  <span style="color:#000">lea</span>         <span style="color:#000">rcx</span><span style="color:#000;font-weight:bold">,[</span><span style="color:#000">f</span><span style="color:#000;font-weight:bold">]</span>  
+</span></span><span style="display:flex;"><span><span style="color:#0000cf;font-weight:bold">00007FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD7547D7</span>  <span style="color:#000">call</span>        <span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">basic_string</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">char_traits</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">allocator</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#ce5c00;font-weight:bold">&gt;::</span><span style="color:#000">basic_string</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">char_traits</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#000">std</span><span style="color:#ce5c00;font-weight:bold">::</span><span style="color:#000">allocator</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">07FF</span><span style="color:#0000cf;font-weight:bold">7</span><span style="color:#000">BD751249h</span><span style="color:#000;font-weight:bold">)</span> 
+</span></span></code></pre></div>
+<h3 id="summary">Summary</h3>
+<p>Looking at the assembler version, you can see all of them have a size directive due to the corresponding type. For our example these are;</p>
+<p>*int -&gt; dword
+*float -&gt; dword
+*double -&gt; mmword
+*char -&gt; byte
+*bool -&gt; byte</p>
+<p><strong>mmword</strong> stands for multimedia word,<strong>dword</strong> is for double word and they are in sizes like 1-2-4-8 bytes. Checking the code again string definition did not use any of these because size of it is 1 byte for each character + 1 byte for the terminator.</p>
+<p>You might also want to check this and learn about <a href="https://thediagramme.com/how-to-calculate-range-of-data-types">Calculating Range of Data Types</a>.</p>
+<p>Feel free to contact me about the subject <a href="mailto:info@thediagramme.com">info@thediagramme.com</a></p>
 <h2 id="quiz">Quiz</h2>
 
 <div class='quizdown'>
@@ -116,25 +230,25 @@ shuffle_questions: false
 shuffle_answers: false
 ---
 
-What is the range of this char?
+What is the equivelant of this char?
 
-> 1 byte
+> You can check the table.
 
-- [ ] -127 to 127 
-- [ ] 0 to 65,535
-- [ ] -32768 to 32767
-- [x] 0 to 255
+- [X] byte
+- [ ] word
+- [ ] dword
+- [ ] qword
 
 ## ``` short z;```
 
-What is the range of this short?
+What is the equivelant of this short?
 
-> 2 byte
+> You can check the table.
 
-- [ ] -127 to 127 
-- [ ] 0 to 65,535
-- [X] -32768 to 32767
-- [ ] 0 to 255
+- [ ] byte
+- [X] word
+- [ ] dword
+- [ ] qword
 
 </div>
 
@@ -144,7 +258,7 @@ What is the range of this short?
             <i class="bi bi-file-person-fill"></i> İhsan Kılınç
         </span>
         <span class="post-date">
-            <i class="bi bi-clock-fill"></i> <time>Jul 12, 2022, 11:56PM</time>
+            <i class="bi bi-clock-fill"></i> <time>Jul 13, 2022, 6:33PM</time>
         </span>
         <span class="post-tags">
             

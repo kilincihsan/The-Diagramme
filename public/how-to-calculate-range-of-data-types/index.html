@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How to calculate range of data types</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script 
+    src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+    </script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+    </script>
+    <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+</head>
+<body>
+    <header id="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <a class="navbar-brand" style="font-size: 24px; font-weight: bold; color: rgba(46, 63, 81, 1.0);" href="/">
+                <img src="../../../images/logo_2.png" alt="..." height="70px">
+                The Diagramme
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="/about/">About</a>
+                  <a class="nav-link" href="/posts/">Posts</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="site-main">
+        <div class="container">
+            
+<article class="single-post">
+    <h1 class="entry-title mt-4 mb-4">How to calculate range of data types</h1>    
+    <div class="entry-content"> <p>These are built-in and predefined data types can be used for declaring variables;</p>
+<ul>
+<li>Integer</li>
+<li>Float</li>
+<li>Double</li>
+<li>Character</li>
+<li>Boolean</li>
+<li>Wide Character</li>
+<li>Void</li>
+</ul>
+<p>And they have modifiers like;</p>
+<ul>
+<li>Short</li>
+<li>Long</li>
+<li>Signed</li>
+<li>Unsigned</li>
+</ul>
+<p>Each of them will allocate a memory space and have a range of values they can hold related to this space. For example, char requires 1 byte, int requires 4 byte, long and double requires 8 byte. And all have different ranges related to that space. It can change by size and generalization for each programming language but it is common or similar for most of the programming languages.</p>
+<h2 id="range-calculation">Range Calculation</h2>
+<p>Default values can be seperated as signed and unsigned.</p>
+<ul>
+<li>Unsigned values can not be negative (range of unsigned char:. 0,255)</li>
+<li>Signed values can be negative or positive (range of signed char: -128,127)</li>
+</ul>
+<p>And note that, it is all <strong>signed by default</strong>.</p>
+<p>You can calculate the range with these formulas;</p>
+<h4 id="for-signed">For Signed:</h4>
+<h3 id="minimum0-maximum2n-1"><code>Minimum:0 Maximum:2^n-1</code></h3>
+<h4 id="for-unsigned">For Unsigned:</h4>
+<h3 id="-minimum-2n-1-maximum2n-1-1-"><code>Minimum:-2^(n-1) Maximum:2^(n-1)-1</code></h3>
+<h4 id="signed-example">Signed Example:</h4>
+<ul>
+<li>For example lets define a char;</li>
+<li>char c=0;</li>
+<li>We know that char requires 1 byte(8 bit)</li>
+<li>We know it will be signed by default.</li>
+<li>Formula for signed;</li>
+<li><strong>minimum -2^(n-1)</strong> = -2^7 = -128</li>
+<li><strong>maximum  2^(n-1)-1</strong> = 2^7-1 = 127</li>
+</ul>
+<h4 id="unsigned-example">Unsigned Example:</h4>
+<ul>
+<li>Lets define an unsigned long to understand it better;</li>
+<li>unsigned long x=0;</li>
+<li>We know that long requires 8 byte(64 bit)</li>
+<li>We know it is unsigned we added it to beginning of identifier.</li>
+<li>Formula for unsigned;</li>
+<li><strong>minimum was 0</strong> = 0</li>
+<li><strong>maximum was (2^n)-1</strong> = 2^64-1 = 18446744073709551615</li>
+</ul>
+<p>So the <strong>character we defined</strong> can take values between <strong>0 and 18446744073709551615</strong>.</p>
+<h2 id="quiz">Quiz</h2>
+
+<div class='quizdown'>
+  
+
+---
+primary_color: orange
+secondary_color: lightgray
+text_color: black
+shuffle_questions: false
+---
+
+## ``` unsigned char c = 0;```
+
+---
+shuffle_answers: false
+---
+
+What is the range of this char?
+
+> 1 byte
+
+- [ ] -127 to 127 
+- [ ] 0 to 65,535
+- [ ] -32768 to 32767
+- [x] 0 to 255
+
+## ``` short z;```
+
+What is the range of this short?
+
+> 2 byte
+
+- [ ] -127 to 127 
+- [ ] 0 to 65,535
+- [X] -32768 to 32767
+- [ ] 0 to 255
+
+</div>
+
+</div>
+    <div class="post-meta mb-4">
+        <span class="post-author ">
+            <i class="bi bi-file-person-fill"></i> İhsan Kılınç
+        </span>
+        <span class="post-date">
+            <i class="bi bi-clock-fill"></i> <time>Jul 12, 2022, 11:56PM</time>
+        </span>
+        <span class="post-tags">
+            
+            <i class="bi bi-bookmark-check-fill"></i> <a href="https://thediagramme.com/tags/assembly/">Assembly </a>
+            
+        </span>
+    </div>
+</article>
+
+        </div>
+
+    </main>
+    <footer id="side-footer" class="bg-dark text-white pb-4 pt-4">
+        <div class="copyright text-center">
+            &copy; 2022 İhsan Kılınç
+        </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

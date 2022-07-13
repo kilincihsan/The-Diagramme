@@ -1,12 +1,10 @@
 +++
-title = "Primitive Data Types in Assembly"
+title = "How to calculate range of data types"
 date = 2022-07-12T23:56:28+03:00
 draft = false
 author = "İhsan Kılınç"
 tags = ["Assembly"]
 +++
-
-## How to calculate range of data types?
 
 These are built-in and predefined data types can be used for declaring variables;
 
