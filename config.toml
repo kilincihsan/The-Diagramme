@@ -2,7 +2,6 @@ baseURL = 'https://thediagramme.com/'
 languageCode = 'en-us'
 title = 'The Diagramme'
 paginate=4
-disqusShortname = 'thediagramme'
 
 [params]
 dateFormat = "Jan 2, 2006, 3:04PM"
@@ -29,4 +28,4 @@ disableHTML = true
 [permalinks]
   posts = '/:title/'
 
-  
+disqusShortname = 'thediagramme-com'  

@@ -152,4 +152,4 @@ What is the equivelant of this short?
 - [ ] qword
 {{< /quizdown >}}
 
-{{ template "_internal/disqus.html" . }}
+
